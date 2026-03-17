@@ -1,0 +1,50 @@
+{
+  "isSuccessful": true,
+  "message": "",
+  "type": "",
+  "errorCode": 0,
+  "payload": [
+    {
+      "user_name": "3N16",
+      "full_name": "Prof. Dr. Dr. dr. Eka J. Wahjoepramono, SpBS, K 2",
+      "doctor_id": 2000000732,
+      "password": "password123"
+    },
+    {
+      "user_name": "enik.setya",
+      "full_name": "ENIK SETYA",
+      "doctor_id": 2000000605,
+      "password": "password123"
+    },
+    {
+      "user_name": "primartanto.wibowo",
+      "full_name": "dr. Primartanto Wibowo, SpAn, KIC",
+      "doctor_id": 2000000868,
+      "password": "password123"
+    },
+    {
+      "user_name": "retna.martinah",
+      "full_name": "Retna Subekti Martinah",
+      "doctor_id": 2000001113,
+      "password": "password123"
+    },
+    {
+      "user_name": "eric",
+      "full_name": "Dr. Eric",
+      "doctor_id": 2000006376,
+      "password": "password123"
+    },
+    {
+      "user_name": "asasasa",
+      "full_name": "Ns. Asasasa",
+      "doctor_id": 2000006346,
+      "password": "asa"
+    },
+    {
+      "user_name": "Test",
+      "full_name": "Ns. Test",
+      "doctor_id": 2000003625,
+      "password": "123"
+    }
+  ]
+}

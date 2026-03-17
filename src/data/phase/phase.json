@@ -1,0 +1,40 @@
+[
+  {
+    "phaseid": 1,
+    "phasename": "Handover (5/5)",
+    "order": 1,
+    "is_verified": true,
+    "has_unplanned_procedure": true,
+    "is_multiple_procedure": true,
+    "tasks": [
+      {
+        "task_id": 25,
+        "phase_id": 1,
+        "task_name": "Pra Anestesi",
+        "order": 0,
+        "is_verified": true,
+        "has_unplanned_procedure": false,
+        "is_mandatory": false,
+        "mandatory_type": 1,
+        "verifications": {},
+        "verifications_procedure": []
+      },
+      {
+        "task_id": 1,
+        "phase_id": 1,
+        "task_name": "Checklist Persiapan Operasi",
+        "order": 1,
+        "is_verified": true,
+        "has_unplanned_procedure": false,
+        "is_mandatory": true,
+        "mandatory_type": 2,
+        "verifications": {
+          "perawat_ipd_verified": true,
+          "perawat_ot_verified": true
+        },
+        "verifications_procedure": []
+      }
+    ],
+    "laporan_operasi_config": ""
+  }
+]

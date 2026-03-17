@@ -1,0 +1,159 @@
+{
+  "operationscheduleid": "f4486948-1be4-4ca8-b472-6f7e03fbf2db",
+  "DeviceId": "123",
+  "taskid": 25,
+  "answer": {
+    "vital_signs": {
+      "berat_badan": 1,
+      "tinggi_badan": 2,
+      "tekanan_darah_sistolik": 3,
+      "tekanan_darah_diastolik": 4,
+      "nadi": 5,
+      "laju_pernafasan": 6,
+      "suhu": 7.5,
+      "vas": 8
+    },
+    "golongan_darah": {
+      "gol_darah": "",
+      "rhesus": null
+    },
+    "pemeriksaan_jalan_napas": {
+      "obstruksi_jalan_napas": [
+        "Tumor",
+        "Stridor"
+      ],
+      "thoraks_abdomen": [
+        "Hamil",
+        "Obstruksi Usus"
+      ],
+      "wajah": [
+        "Dalam Batas Normal"
+      ],
+      "buka_mulut": true,
+      "jarak_thyro_mental": true,
+      "skor_mallampati": "III",
+      "pergerakan_leher_rahang": false,
+      "pergerakan_leher_fleksi": false,
+      "pergerakan_leher_penyangga": true,
+      "jalan_napas_sulit": true
+    },
+    "sistem": {
+      "pernapasan": {
+        "selected": [
+          "Asma",
+          "Bronkitis"
+        ],
+        "dalam_batas_normal": false,
+        "lainnya": ""
+      },
+      "kardiovaskular": {
+        "selected": [
+          "EKG Abnormal"
+        ],
+        "dalam_batas_normal": false,
+        "lainnya": ""
+      },
+      "neuro_musculoskeletal": {
+        "selected": [
+          "Test ne"
+        ],
+        "dalam_batas_normal": false,
+        "lainnya": ""
+      },
+      "renal_endokrin": {
+        "selected": [],
+        "dalam_batas_normal": true,
+        "lainnya": ""
+      },
+      "hepato_gastrointestinal": {
+        "selected": [
+          "Ulkus"
+        ],
+        "dalam_batas_normal": false,
+        "lainnya": ""
+      },
+      "lain_lain": {
+        "selected": [
+          "Anemia",
+          "Dehidrasi",
+          "lainnya"
+        ],
+        "dalam_batas_normal": false,
+        "lainnya": ""
+      }
+    },
+    "lain_lain": {
+      "merokok": {
+        "status": true,
+        "durasi": 1,
+        "durasi_unit": "Tahun",
+        "berapa_banyak": 12,
+        "berapa_banyak_unit": "Batang",
+        "berapa_banyak_periode": "Hari",
+        "catatan": "asa"
+      },
+      "alkohol": {
+        "status": false,
+        "durasi": null,
+        "durasi_unit": "Tahun",
+        "berapa_banyak": null,
+        "berapa_banyak_unit": "Gelas",
+        "berapa_banyak_periode": "Hari",
+        "catatan": ""
+      },
+      "laboratorium": {
+        "items": [
+          {
+            "names": "Neurology, MRI Scans",
+            "date": "12 February 2026",
+            "nomor": "ONO20000000127",
+            "doctor_name": "Dr. Brian T. Smith, Sp.JP"
+          },
+          {
+            "names": "Dermatology, Skin Biopsies",
+            "date": "3 February 2026",
+            "nomor": "ONO20000000129",
+            "doctor_name": "Dr. Daniel K. Wong, Sp.JP"
+          }
+        ],
+        "catatan": "123"
+      },
+      "radiology": {
+        "items": [],
+        "catatan": "test rad aja"
+      },
+      "daftar_masalah": [
+        "masalah 1"
+      ],
+      "ps_asa": [
+        4,
+        "E"
+      ]
+    },
+    "poc_sedasi_anestesi": {
+      "teknik_anestesi": [
+        "MAC",
+        "Sedasi",
+        "Lainnya",
+        "Teknik alternatif"
+      ],
+      "teknik_anestesi_lainnya": "",
+      "teknik_alternatif": "teknik 1",
+      "monitoring_invasif": [
+        "A Line",
+        "CVC"
+      ],
+      "monitoring_invasif_lainnya": "",
+      "kontrol_nyeri": [
+        "Intravena"
+      ],
+      "kontrol_nyeri_lainnya": "",
+      "risiko": [
+        "risiko 1"
+      ]
+    }
+  },
+  "is_draft": false,
+  "isactive": true,
+  "last_save": "2026-02-26T00:40:22.677Z"
+}
