@@ -1,0 +1,260 @@
+{
+  "drugs": [
+    {
+      "id": 1,
+      "name": "PROPOFOL 10MG/ML-20ML INJ",
+      "active_ingredients": "Propofol",
+      "stock": 450,
+      "formularium_type": "General",
+      "is_frequently_used": true
+    },
+    {
+      "id": 2,
+      "name": "PROPOFOL 10MG/ML-50ML INJ",
+      "active_ingredients": "Propofol",
+      "stock": 210,
+      "formularium_type": "General",
+      "is_frequently_used": false
+    },
+    {
+      "id": 3,
+      "name": "FENTANYL 50MCG/ML-10ML INJ",
+      "active_ingredients": "Fentanyl",
+      "stock": 320,
+      "formularium_type": "General",
+      "is_frequently_used": true
+    },
+    {
+      "id": 4,
+      "name": "MIDAZOLAM 5MG/ML-3ML INJ",
+      "active_ingredients": "Midazolam",
+      "stock": 185,
+      "formularium_type": "General",
+      "is_frequently_used": true
+    },
+    {
+      "id": 5,
+      "name": "KETAMINE 10MG/ML-20ML INJ",
+      "active_ingredients": "Ketamine HCl",
+      "stock": 90,
+      "formularium_type": "General",
+      "is_frequently_used": false
+    },
+    {
+      "id": 6,
+      "name": "ATROPINE 0.25MG/ML-1ML INJ",
+      "active_ingredients": "Atropine Sulfate",
+      "stock": 540,
+      "formularium_type": "General",
+      "is_frequently_used": true
+    },
+    {
+      "id": 7,
+      "name": "DEXAMETHASONE 5MG/ML-1ML INJ",
+      "active_ingredients": "Dexamethasone",
+      "stock": 700,
+      "formularium_type": "General",
+      "is_frequently_used": true
+    },
+    {
+      "id": 8,
+      "name": "ONDANSETRON 2MG/ML-4ML INJ",
+      "active_ingredients": "Ondansetron",
+      "stock": 280,
+      "formularium_type": "General",
+      "is_frequently_used": true
+    },
+    {
+      "id": 9,
+      "name": "KETOROLAC 30MG/ML-1ML INJ",
+      "active_ingredients": "Ketorolac Tromethamine",
+      "stock": 390,
+      "formularium_type": "General",
+      "is_frequently_used": true
+    },
+    {
+      "id": 10,
+      "name": "MORPHINE 10MG/ML-1ML INJ",
+      "active_ingredients": "Morphine Sulfate",
+      "stock": 150,
+      "formularium_type": "General",
+      "is_frequently_used": false
+    },
+    {
+      "id": 11,
+      "name": "EPHEDRINE 50MG/ML-1ML INJ",
+      "active_ingredients": "Ephedrine HCl",
+      "stock": 200,
+      "formularium_type": "General",
+      "is_frequently_used": false
+    },
+    {
+      "id": 12,
+      "name": "NEOSTIGMINE 0.5MG/ML-1ML INJ",
+      "active_ingredients": "Neostigmine Methylsulfate",
+      "stock": 120,
+      "formularium_type": "General",
+      "is_frequently_used": false
+    },
+    {
+      "id": 101,
+      "name": "PROPOFOL INHEALTH 10MG/ML-20ML INJ",
+      "active_ingredients": "Propofol",
+      "stock": 300,
+      "formularium_type": "InHealth",
+      "is_frequently_used": false
+    },
+    {
+      "id": 102,
+      "name": "FENTANYL INHEALTH 50MCG/ML-10ML INJ",
+      "active_ingredients": "Fentanyl",
+      "stock": 180,
+      "formularium_type": "InHealth",
+      "is_frequently_used": false
+    },
+    {
+      "id": 103,
+      "name": "MIDAZOLAM INHEALTH 5MG/ML-3ML INJ",
+      "active_ingredients": "Midazolam",
+      "stock": 250,
+      "formularium_type": "InHealth",
+      "is_frequently_used": false
+    },
+    {
+      "id": 104,
+      "name": "KETAMINE INHEALTH 10MG/ML-10ML INJ",
+      "active_ingredients": "Ketamine HCl",
+      "stock": 80,
+      "formularium_type": "InHealth",
+      "is_frequently_used": false
+    },
+    {
+      "id": 105,
+      "name": "ROCURONIUM 10MG/ML-5ML INJ",
+      "active_ingredients": "Rocuronium Bromide",
+      "stock": 160,
+      "formularium_type": "InHealth",
+      "is_frequently_used": true
+    },
+    {
+      "id": 106,
+      "name": "VECURONIUM 4MG VIAL INJ",
+      "active_ingredients": "Vecuronium Bromide",
+      "stock": 220,
+      "formularium_type": "InHealth",
+      "is_frequently_used": false
+    },
+    {
+      "id": 107,
+      "name": "ATROPINE INHEALTH 0.25MG/ML-1ML INJ",
+      "active_ingredients": "Atropine Sulfate",
+      "stock": 410,
+      "formularium_type": "InHealth",
+      "is_frequently_used": false
+    },
+    {
+      "id": 108,
+      "name": "ONDANSETRON INHEALTH 2MG/ML-4ML INJ",
+      "active_ingredients": "Ondansetron",
+      "stock": 190,
+      "formularium_type": "InHealth",
+      "is_frequently_used": false
+    },
+    {
+      "id": 109,
+      "name": "DEXAMETHASONE INHEALTH 5MG/ML-1ML INJ",
+      "active_ingredients": "Dexamethasone",
+      "stock": 340,
+      "formularium_type": "InHealth",
+      "is_frequently_used": false
+    },
+    {
+      "id": 110,
+      "name": "KETOROLAC INHEALTH 30MG/ML-1ML INJ",
+      "active_ingredients": "Ketorolac Tromethamine",
+      "stock": 270,
+      "formularium_type": "InHealth",
+      "is_frequently_used": false
+    },
+    {
+      "id": 201,
+      "name": "PROPOFOL GENERIK 10MG/ML-20ML INJ",
+      "active_ingredients": "Propofol",
+      "stock": 500,
+      "formularium_type": "BPJS",
+      "is_frequently_used": false
+    },
+    {
+      "id": 202,
+      "name": "KETAMINE GENERIK 50MG/ML-10ML INJ",
+      "active_ingredients": "Ketamine HCl",
+      "stock": 130,
+      "formularium_type": "BPJS",
+      "is_frequently_used": false
+    },
+    {
+      "id": 203,
+      "name": "MIDAZOLAM GENERIK 5MG/ML-3ML INJ",
+      "active_ingredients": "Midazolam",
+      "stock": 310,
+      "formularium_type": "BPJS",
+      "is_frequently_used": false
+    },
+    {
+      "id": 204,
+      "name": "ATROPINE GENERIK 0.25MG/ML-1ML INJ",
+      "active_ingredients": "Atropine Sulfate",
+      "stock": 600,
+      "formularium_type": "BPJS",
+      "is_frequently_used": false
+    },
+    {
+      "id": 205,
+      "name": "DEXAMETHASONE GENERIK 5MG/ML-1ML INJ",
+      "active_ingredients": "Dexamethasone",
+      "stock": 820,
+      "formularium_type": "BPJS",
+      "is_frequently_used": false
+    },
+    {
+      "id": 206,
+      "name": "ONDANSETRON GENERIK 2MG/ML-4ML INJ",
+      "active_ingredients": "Ondansetron",
+      "stock": 440,
+      "formularium_type": "BPJS",
+      "is_frequently_used": false
+    },
+    {
+      "id": 207,
+      "name": "KETOROLAC GENERIK 30MG/ML-1ML INJ",
+      "active_ingredients": "Ketorolac Tromethamine",
+      "stock": 380,
+      "formularium_type": "BPJS",
+      "is_frequently_used": false
+    },
+    {
+      "id": 208,
+      "name": "TRAMADOL 50MG/ML-2ML INJ",
+      "active_ingredients": "Tramadol HCl",
+      "stock": 290,
+      "formularium_type": "BPJS",
+      "is_frequently_used": false
+    },
+    {
+      "id": 209,
+      "name": "DIAZEPAM 5MG/ML-2ML INJ",
+      "active_ingredients": "Diazepam",
+      "stock": 170,
+      "formularium_type": "BPJS",
+      "is_frequently_used": false
+    },
+    {
+      "id": 210,
+      "name": "MORPHINE GENERIK 10MG/ML-1ML INJ",
+      "active_ingredients": "Morphine Sulfate",
+      "stock": 100,
+      "formularium_type": "BPJS",
+      "is_frequently_used": false
+    }
+  ]
+}

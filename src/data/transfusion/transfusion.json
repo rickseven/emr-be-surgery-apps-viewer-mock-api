@@ -1,0 +1,108 @@
+{
+  "transfusions": [
+    {
+      "id": 1,
+      "name": "Packed Red Cells (PRC)"
+    },
+    {
+      "id": 2,
+      "name": "Whole Blood (WB)"
+    },
+    {
+      "id": 3,
+      "name": "Fresh Frozen Plasma (FFP)"
+    },
+    {
+      "id": 4,
+      "name": "Thrombocyte Concentrate (TC)"
+    },
+    {
+      "id": 5,
+      "name": "Cryoprecipitate"
+    },
+    {
+      "id": 6,
+      "name": "Washed Red Cells"
+    },
+    {
+      "id": 7,
+      "name": "Irradiated PRC"
+    },
+    {
+      "id": 8,
+      "name": "Leukodepleted PRC"
+    },
+    {
+      "id": 9,
+      "name": "Apheresis Thrombocyte"
+    },
+    {
+      "id": 10,
+      "name": "Granulocyte Concentrate"
+    },
+    {
+      "id": 101,
+      "name": "PRC INHEALTH"
+    },
+    {
+      "id": 102,
+      "name": "FFP INHEALTH"
+    },
+    {
+      "id": 103,
+      "name": "TC INHEALTH"
+    },
+    {
+      "id": 104,
+      "name": "Whole Blood INHEALTH"
+    },
+    {
+      "id": 105,
+      "name": "Cryoprecipitate INHEALTH"
+    },
+    {
+      "id": 201,
+      "name": "PRC GENERIK"
+    },
+    {
+      "id": 202,
+      "name": "FFP GENERIK"
+    },
+    {
+      "id": 203,
+      "name": "TC GENERIK"
+    },
+    {
+      "id": 204,
+      "name": "Whole Blood GENERIK"
+    },
+    {
+      "id": 205,
+      "name": "Cryoprecipitate GENERIK"
+    },
+    {
+      "id": 206,
+      "name": "Test X"
+    },
+    {
+      "id": 207,
+      "name": "Transfusi A"
+    },
+    {
+      "id": 208,
+      "name": "Transfusi A1"
+    },
+    {
+      "id": 209,
+      "name": "Transfusi A2"
+    },
+    {
+      "id": 210,
+      "name": "Transfusi A3"
+    },
+    {
+      "id": 211,
+      "name": "transfusi A4"
+    }
+  ]
+}

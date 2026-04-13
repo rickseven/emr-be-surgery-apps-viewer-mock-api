@@ -10,6 +10,7 @@ const getPreInductionDocument = (req, res) => {
     errorCode: 0,
     payload: {
       hospital_info: {
+        name: "Siloam Hospital Lippo Village",
         address:
           "JALAN SILOAM NO.6 TANGERANG\r\nTELP : 021 - 5460055\r\nFAX  : 021 - 54210090",
       },
@@ -177,6 +178,7 @@ const getPreAnesthesiaDocument = (req, res) => {
     errorCode: 0,
     payload: {
       hospital_info: {
+        name: "Siloam Hospital Lippo Village",
         address:
           "JALAN SILOAM NO.6 TANGERANG\r\nTELP : 021 - 5460055\r\nFAX  : 021 - 54210090",
       },

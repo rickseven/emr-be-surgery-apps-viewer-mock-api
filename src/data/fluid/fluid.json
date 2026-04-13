@@ -1,0 +1,220 @@
+{
+  "fluids": [
+    {
+      "id": 1,
+      "name": "NaCl 0.9% - 500mL",
+      "active_ingredients": "Sodium Chloride",
+      "stock": 380,
+      "formularium_type": "General",
+      "is_frequently_used": true
+    },
+    {
+      "id": 2,
+      "name": "NaCl 0.9% - 100mL",
+      "active_ingredients": "Sodium Chloride",
+      "stock": 520,
+      "formularium_type": "General",
+      "is_frequently_used": false
+    },
+    {
+      "id": 3,
+      "name": "Ringer Lactate - 500mL",
+      "active_ingredients": "Sodium Lactate",
+      "stock": 640,
+      "formularium_type": "General",
+      "is_frequently_used": true
+    },
+    {
+      "id": 4,
+      "name": "Ringer Lactate - 1000mL",
+      "active_ingredients": "Sodium Lactate",
+      "stock": 290,
+      "formularium_type": "General",
+      "is_frequently_used": false
+    },
+    {
+      "id": 5,
+      "name": "Dextrose 5% - 500mL",
+      "active_ingredients": "Glucose",
+      "stock": 410,
+      "formularium_type": "General",
+      "is_frequently_used": true
+    },
+    {
+      "id": 6,
+      "name": "Dextrose 5% - 1000mL",
+      "active_ingredients": "Glucose",
+      "stock": 175,
+      "formularium_type": "General",
+      "is_frequently_used": false
+    },
+    {
+      "id": 7,
+      "name": "Dextrose 10% - 500mL",
+      "active_ingredients": "Glucose",
+      "stock": 130,
+      "formularium_type": "General",
+      "is_frequently_used": false
+    },
+    {
+      "id": 8,
+      "name": "Plasmalyte - 500mL",
+      "active_ingredients": "Balanced Crystalloid",
+      "stock": 200,
+      "formularium_type": "General",
+      "is_frequently_used": true
+    },
+    {
+      "id": 9,
+      "name": "Gelafundin 4% - 500mL",
+      "active_ingredients": "Modified Gelatin",
+      "stock": 150,
+      "formularium_type": "General",
+      "is_frequently_used": true
+    },
+    {
+      "id": 10,
+      "name": "Albumin 20% - 100mL",
+      "active_ingredients": "Human Albumin",
+      "stock": 45,
+      "formularium_type": "General",
+      "is_frequently_used": true
+    },
+    {
+      "id": 11,
+      "name": "Voluven 6% - 500mL",
+      "active_ingredients": "Hydroxyethyl Starch",
+      "stock": 90,
+      "formularium_type": "General",
+      "is_frequently_used": true
+    },
+    {
+      "id": 12,
+      "name": "Mannitol 20% - 250mL",
+      "active_ingredients": "Mannitol",
+      "stock": 80,
+      "formularium_type": "General",
+      "is_frequently_used": true
+    },
+    {
+      "id": 101,
+      "name": "NaCl 0.9% INHEALTH - 500mL",
+      "active_ingredients": "Sodium Chloride",
+      "stock": 300,
+      "formularium_type": "InHealth",
+      "is_frequently_used": false
+    },
+    {
+      "id": 102,
+      "name": "Ringer Lactate INHEALTH - 500mL",
+      "active_ingredients": "Sodium Lactate",
+      "stock": 420,
+      "formularium_type": "InHealth",
+      "is_frequently_used": false
+    },
+    {
+      "id": 103,
+      "name": "Dextrose 5% INHEALTH - 500mL",
+      "active_ingredients": "Glucose",
+      "stock": 260,
+      "formularium_type": "InHealth",
+      "is_frequently_used": false
+    },
+    {
+      "id": 104,
+      "name": "Dextrose 10% INHEALTH - 500mL",
+      "active_ingredients": "Glucose",
+      "stock": 110,
+      "formularium_type": "InHealth",
+      "is_frequently_used": false
+    },
+    {
+      "id": 105,
+      "name": "Plasmalyte INHEALTH - 500mL",
+      "active_ingredients": "Balanced Crystalloid",
+      "stock": 180,
+      "formularium_type": "InHealth",
+      "is_frequently_used": false
+    },
+    {
+      "id": 106,
+      "name": "Gelafundin INHEALTH - 500mL",
+      "active_ingredients": "Modified Gelatin",
+      "stock": 130,
+      "formularium_type": "InHealth",
+      "is_frequently_used": false
+    },
+    {
+      "id": 107,
+      "name": "Albumin INHEALTH 25% - 100mL",
+      "active_ingredients": "Human Albumin",
+      "stock": 35,
+      "formularium_type": "InHealth",
+      "is_frequently_used": false
+    },
+    {
+      "id": 108,
+      "name": "Mannitol INHEALTH 20% - 250mL",
+      "active_ingredients": "Mannitol",
+      "stock": 70,
+      "formularium_type": "InHealth",
+      "is_frequently_used": false
+    },
+    {
+      "id": 201,
+      "name": "NaCl GENERIK 0.9% - 500mL",
+      "active_ingredients": "Sodium Chloride",
+      "stock": 600,
+      "formularium_type": "BPJS",
+      "is_frequently_used": false
+    },
+    {
+      "id": 202,
+      "name": "Ringer Lactate GENERIK - 500mL",
+      "active_ingredients": "Sodium Lactate",
+      "stock": 750,
+      "formularium_type": "BPJS",
+      "is_frequently_used": false
+    },
+    {
+      "id": 203,
+      "name": "Ringer Lactate GENERIK - 1000mL",
+      "active_ingredients": "Sodium Lactate",
+      "stock": 320,
+      "formularium_type": "BPJS",
+      "is_frequently_used": false
+    },
+    {
+      "id": 204,
+      "name": "Dextrose GENERIK 5% - 500mL",
+      "active_ingredients": "Glucose",
+      "stock": 490,
+      "formularium_type": "BPJS",
+      "is_frequently_used": false
+    },
+    {
+      "id": 205,
+      "name": "Dextrose GENERIK 10% - 500mL",
+      "active_ingredients": "Glucose",
+      "stock": 140,
+      "formularium_type": "BPJS",
+      "is_frequently_used": false
+    },
+    {
+      "id": 206,
+      "name": "Mannitol GENERIK 20% - 250mL",
+      "active_ingredients": "Mannitol",
+      "stock": 95,
+      "formularium_type": "BPJS",
+      "is_frequently_used": false
+    },
+    {
+      "id": 207,
+      "name": "Albumin GENERIK 20% - 100mL",
+      "active_ingredients": "Human Albumin",
+      "stock": 30,
+      "formularium_type": "BPJS",
+      "is_frequently_used": false
+    }
+  ]
+}

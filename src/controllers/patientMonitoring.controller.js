@@ -73,14 +73,17 @@ const getPatientMonitoringResults = (req, res) => {
 
   const filteredPayload = {
     latest_modified_date: payload.latest_modified_date,
+    is_discharged: typeof payload.is_discharged === "boolean" ? payload.is_discharged : false,
     results: filteredResults,
   };
 
-  return res.json({
-    isSuccessful: true,
-    message: "Success",
-    payload: filteredPayload,
-  });
+  setTimeout(() => {
+    return res.json({
+      isSuccessful: true,
+      message: "Success",
+      payload: filteredPayload,
+    });
+  }, 3000);
 };
 
 const upsertItem = (req, res) => {
@@ -186,10 +189,37 @@ const upsertResults = (req, res) => {
       message: "",
       payload: {
         latest_modified_date,
+        is_discharged: typeof data.is_discharged === "boolean" ? data.is_discharged : false,
         results: data.results
       }
     });
   }, 3000); // Dummy timer: 3 detik
 };
 
-module.exports = { getPatientMonitoringItems, getPatientMonitoringResults, upsertItem, upsertResults };
+const verification = (req, res) => {
+  const { user_name, password, operation_schedule_id } = req.body;
+
+  console.log(`  -> user_name: ${user_name}`);
+  console.log(`  -> operation_schedule_id: ${operation_schedule_id}`);
+
+  if (!user_name || !password || !operation_schedule_id) {
+    return res.status(400).json({
+      status: null,
+      isSuccessful: false,
+      message: "Fields 'user_name', 'password', and 'operation_schedule_id' are required",
+      type: "",
+      errorCode: 400,
+      payload: null,
+    });
+  }
+
+  return res.json({
+    status: null,
+    isSuccessful: true,
+    message: "",
+    type: "",
+    errorCode: 0,
+  });
+};
+
+module.exports = { getPatientMonitoringItems, getPatientMonitoringResults, upsertItem, upsertResults, verification };

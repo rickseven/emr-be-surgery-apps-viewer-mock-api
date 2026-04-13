@@ -1,0 +1,16 @@
+{
+  "gas": [
+    {
+      "id": 1,
+      "name": "Desflurane"
+    },
+    {
+      "id": 2,
+      "name": "Isoflurane"
+    },
+    {
+      "id": 3,
+      "name": "Sevoflurane"
+    }
+  ]
+}
