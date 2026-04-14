@@ -74,6 +74,7 @@ const getPatientMonitoringResults = (req, res) => {
   const filteredPayload = {
     latest_modified_date: payload.latest_modified_date,
     is_discharged: typeof payload.is_discharged === "boolean" ? payload.is_discharged : false,
+    is_verified: typeof payload.is_verified === "boolean" ? payload.is_verified : false,
     results: filteredResults,
   };
 
@@ -134,7 +135,7 @@ const upsertItem = (req, res) => {
 };
 
 const upsertResults = (req, res) => {
-  const { operationscheduleid, results } = req.body;
+  const { operationscheduleid, results, is_discharged, is_verified } = req.body;
 
   console.log(`  -> operationscheduleid: ${operationscheduleid}`);
   console.log(`  -> results count: ${results?.length}`);
@@ -180,6 +181,12 @@ const upsertResults = (req, res) => {
   // Set latest_modified_date ke waktu sekarang di zona Asia/Jakarta
   const latest_modified_date = moment().tz("Asia/Jakarta").format("YYYY-MM-DDTHH:mm:ss");
   data.latest_modified_date = latest_modified_date;
+  if (typeof is_discharged === "boolean") {
+    data.is_discharged = is_discharged;
+  }
+  if (typeof is_verified === "boolean") {
+    data.is_verified = is_verified;
+  }
 
   fs.writeFileSync(RESULTS_JSON_PATH, JSON.stringify(data, null, 2), "utf-8");
 
@@ -190,6 +197,7 @@ const upsertResults = (req, res) => {
       payload: {
         latest_modified_date,
         is_discharged: typeof data.is_discharged === "boolean" ? data.is_discharged : false,
+        is_verified: typeof data.is_verified === "boolean" ? data.is_verified : false,
         results: data.results
       }
     });
