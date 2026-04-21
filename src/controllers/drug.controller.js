@@ -20,6 +20,7 @@ const getDrugs = (req, res) => {
 
   const raw = fs.readFileSync(JSON_PATH, "utf-8").replace(/^\uFEFF/, "");
   const data = JSON.parse(raw);
+  const drugs = data.drugs.map(({ stock, ...rest }) => rest);
 
   return res.json({
     isSuccessful: true,
@@ -27,7 +28,7 @@ const getDrugs = (req, res) => {
     type: "",
     errorCode: 0,
     payload: {
-      drugs: data.drugs,
+      drugs,
     },
   });
 };

@@ -20,6 +20,7 @@ const getFluids = (req, res) => {
 
   const raw = fs.readFileSync(JSON_PATH, "utf-8").replace(/^\uFEFF/, "");
   const data = JSON.parse(raw);
+  const fluids = data.fluids.map(({ stock, ...rest }) => rest);
 
   return res.json({
     isSuccessful: true,
@@ -27,7 +28,7 @@ const getFluids = (req, res) => {
     type: "",
     errorCode: 0,
     payload: {
-      fluids: data.fluids,
+      fluids,
     },
   });
 };
