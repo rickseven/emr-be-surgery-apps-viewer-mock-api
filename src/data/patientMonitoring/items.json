@@ -172,7 +172,7 @@
       "item_type": "",
       "remark": "",
       "category_id": 6,
-      "display_order": 5,
+      "display_order": 6,
       "is_active": true,
       "is_deletable": false
     },
@@ -183,7 +183,7 @@
       "item_type": "",
       "remark": "",
       "category_id": 6,
-      "display_order": 6,
+      "display_order": 7,
       "is_active": true,
       "is_deletable": false
     },
@@ -194,7 +194,7 @@
       "item_type": "",
       "remark": "",
       "category_id": 6,
-      "display_order": 7,
+      "display_order": 8,
       "is_active": true,
       "is_deletable": false
     },
@@ -349,6 +349,50 @@
       "remark": "",
       "category_id": 11,
       "display_order": 1,
+      "is_active": true,
+      "is_deletable": false
+    },
+    {
+      "item_id": 33,
+      "item_name": "Desflurane",
+      "item_unit": "Vol%",
+      "item_type": "",
+      "remark": "",
+      "category_id": 1,
+      "display_order": 4,
+      "is_active": true,
+      "is_deletable": false
+    },
+    {
+      "item_id": 34,
+      "item_name": "Sevoflurane",
+      "item_unit": "Vol%",
+      "item_type": "",
+      "remark": "",
+      "category_id": 1,
+      "display_order": 5,
+      "is_active": true,
+      "is_deletable": false
+    },
+    {
+      "item_id": 35,
+      "item_name": "Isoflurane",
+      "item_unit": "Vol%",
+      "item_type": "",
+      "remark": "",
+      "category_id": 1,
+      "display_order": 6,
+      "is_active": true,
+      "is_deletable": false
+    },
+    {
+      "item_id": 36,
+      "item_name": "RR Type",
+      "item_unit": "",
+      "item_type": "",
+      "remark": "",
+      "category_id": 6,
+      "display_order": 5,
       "is_active": true,
       "is_deletable": false
     }

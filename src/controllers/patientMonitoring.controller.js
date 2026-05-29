@@ -12,6 +12,8 @@ const RESULTS_JSON_PATH = path.join(
   "../data/patientMonitoring/results.json"
 );
 
+const ISO_WITH_MS_FORMAT = "YYYY-MM-DDTHH:mm:ss.SSS";
+
 const getPatientMonitoringItems = (req, res) => {
   const { operationScheduleId, observationDate } = req.params;
 
@@ -75,6 +77,22 @@ const getPatientMonitoringResults = (req, res) => {
     latest_modified_date: payload.latest_modified_date,
     is_discharged: typeof payload.is_discharged === "boolean" ? payload.is_discharged : false,
     is_verified: typeof payload.is_verified === "boolean" ? payload.is_verified : false,
+    hospital_info: {
+      address: "JALAN SILOAM NO.6 TANGERANG\r\nTELP : 021 - 5460055\r\nFAX  : 021 - 54210090",
+      name: "SILOAM HOSPITALS LIPPO VILLAGE"
+    },
+    patient_info: {
+      mr: "318755",
+      name: "AGUS LEONARDO",
+      dob: "10 Aug 1978",
+      age: "47T 7B 20H",
+      gender: "Laki-Laki",
+      dpjp: "",
+      admission_no: "IPA2511260043",
+      admission_date: "26 Nov 2025",
+      bed_no: "444497",
+      ward: "SAMARIA 10F"
+    },
     results: filteredResults,
   };
 
@@ -103,8 +121,9 @@ const upsertItem = (req, res) => {
 
   const raw = fs.readFileSync(ITEMS_JSON_PATH, "utf-8").replace(/^\uFEFF/, "");
   const data = JSON.parse(raw);
+  const itemId = Number(item.item_id);
 
-  if (item.item_id === 0) {
+  if (itemId === 0) {
     // Add: generate new item_id
     const maxId = data.items.reduce((max, i) => Math.max(max, i.item_id), 0);
     const newItem = { ...item, item_id: maxId + 1 };
@@ -115,16 +134,46 @@ const upsertItem = (req, res) => {
       message: "Item added successfully",
       payload: newItem,
     });
-  } else {
-    // Update
-    const index = data.items.findIndex((i) => i.item_id === item.item_id);
+  }
+
+  if (itemId > 0) {
+    // Edit flow: compare identity fields and version item when changed.
+    const index = data.items.findIndex((i) => i.item_id === itemId);
     if (index === -1) {
       return res.status(404).json({
         isSuccessful: false,
-        message: `Item with item_id ${item.item_id} not found`,
+        message: `Item with item_id ${itemId} not found`,
       });
     }
-    data.items[index] = { ...data.items[index], ...item };
+
+    const existingItem = data.items[index];
+    const hasIdentityChange =
+      existingItem.item_name !== item.item_name ||
+      existingItem.item_unit !== item.item_unit ||
+      existingItem.item_type !== item.item_type;
+
+    if (hasIdentityChange) {
+      // Mark old item inactive, then insert new active item from payload.
+      data.items[index] = { ...existingItem, is_active: false };
+
+      const maxId = data.items.reduce((max, i) => Math.max(max, i.item_id), 0);
+      const newItem = {
+        ...item,
+        item_id: maxId + 1,
+        is_active: true,
+      };
+      data.items.push(newItem);
+
+      fs.writeFileSync(ITEMS_JSON_PATH, JSON.stringify(data, null, 2), "utf-8");
+      return res.json({
+        isSuccessful: true,
+        message: "Item updated as new version successfully",
+        payload: newItem,
+      });
+    }
+
+    // No identity change, update existing item in-place.
+    data.items[index] = { ...existingItem, ...item, item_id: existingItem.item_id };
     fs.writeFileSync(ITEMS_JSON_PATH, JSON.stringify(data, null, 2), "utf-8");
     return res.json({
       isSuccessful: true,
@@ -132,6 +181,11 @@ const upsertItem = (req, res) => {
       payload: data.items[index],
     });
   }
+
+  return res.status(400).json({
+    isSuccessful: false,
+    message: "Field 'item.item_id' must be a number greater than or equal to 0",
+  });
 };
 
 const upsertResults = (req, res) => {
@@ -156,8 +210,8 @@ const upsertResults = (req, res) => {
   for (const result of results) {
     // Pastikan observation_date selalu diubah ke waktu lokal Asia/Jakarta
     let obsDate = result.observation_date
-      ? moment.tz(result.observation_date, "Asia/Jakarta").format("YYYY-MM-DDTHH:mm:ss")
-      : moment().tz("Asia/Jakarta").format("YYYY-MM-DDTHH:mm:ss");
+      ? moment.tz(result.observation_date, "Asia/Jakarta").format(ISO_WITH_MS_FORMAT)
+      : moment().tz("Asia/Jakarta").format(ISO_WITH_MS_FORMAT);
     const resultWithTz = { ...result, observation_date: obsDate };
     if (result.result_id === 0) {
       const maxId = data.results.reduce((max, r) => Math.max(max, r.result_id), 0);
@@ -179,7 +233,7 @@ const upsertResults = (req, res) => {
   }
 
   // Set latest_modified_date ke waktu sekarang di zona Asia/Jakarta
-  const latest_modified_date = moment().tz("Asia/Jakarta").format("YYYY-MM-DDTHH:mm:ss");
+  const latest_modified_date = moment().tz("Asia/Jakarta").format(ISO_WITH_MS_FORMAT);
   data.latest_modified_date = latest_modified_date;
   if (typeof is_discharged === "boolean") {
     data.is_discharged = is_discharged;
