@@ -93,6 +93,7 @@ const getPatientMonitoringResults = (req, res) => {
       bed_no: "444497",
       ward: "SAMARIA 10F"
     },
+    signatures: Array.isArray(payload.signatures) ? payload.signatures : [],
     results: filteredResults,
   };
 
@@ -189,7 +190,7 @@ const upsertItem = (req, res) => {
 };
 
 const upsertResults = (req, res) => {
-  const { operationscheduleid, results, is_discharged, is_verified } = req.body;
+  const { operationscheduleid, results, is_discharged, is_verified, signatures } = req.body;
 
   console.log(`  -> operationscheduleid: ${operationscheduleid}`);
   console.log(`  -> results count: ${results?.length}`);
@@ -240,6 +241,9 @@ const upsertResults = (req, res) => {
   }
   if (typeof is_verified === "boolean") {
     data.is_verified = is_verified;
+  }
+  if (Array.isArray(signatures)) {
+    data.signatures = signatures;
   }
 
   fs.writeFileSync(RESULTS_JSON_PATH, JSON.stringify(data, null, 2), "utf-8");

@@ -1,7 +1,33 @@
 {
-  "latest_modified_date": "2026-04-13T09:58:03",
+  "latest_modified_date": "2026-06-02T14:32:37.853",
   "is_discharged": false,
   "is_verified": false,
+  "signatures": [
+    {
+      "role": "Dokter Anestesi",
+      "name": "dr. Primartanto Wibowo, SpAn, KIC",
+      "date": "27/02/2026",
+      "time": "22:40"
+    },
+    {
+      "role": "Perawat Anestesi",
+      "name": "dr. Primartanto",
+      "date": "27/02/2026",
+      "time": "21:40"
+    },
+    {
+      "role": "Perawat Anestesi",
+      "name": "dr. Primartanto D",
+      "date": "27/02/2026",
+      "time": "21:40"
+    },
+    {
+      "role": "Perawat RR",
+      "name": "dr. Primartanto D",
+      "date": "27/02/2026",
+      "time": "21:40"
+    }
+  ],
   "results": [
   ]
 }
