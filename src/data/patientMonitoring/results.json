@@ -1,29 +1,29 @@
 {
-  "latest_modified_date": "2026-06-02T14:32:37.853",
-  "is_discharged": false,
+  "latest_modified_date": "2026-06-18T19:44:36.032",
+  "is_discharge": false,
   "is_verified": false,
   "signatures": [
     {
-      "role": "Dokter Anestesi",
+      "role": "dokter_anestesi",
       "name": "dr. Primartanto Wibowo, SpAn, KIC",
+      "date": "27/02/2026",
+      "time": "23:40"
+    },
+    {
+      "role": "perawat_anestesi",
+      "name": "Siti Rahmawati, S.Kep., Ns.",
+      "date": "27/02/2026",
+      "time": "21:40"
+    },
+    {
+      "role": "perawat_anestesi",
+      "name": "Andi Prasetyo, S.Kep.",
       "date": "27/02/2026",
       "time": "22:40"
     },
     {
-      "role": "Perawat Anestesi",
-      "name": "dr. Primartanto",
-      "date": "27/02/2026",
-      "time": "21:40"
-    },
-    {
-      "role": "Perawat Anestesi",
-      "name": "dr. Primartanto D",
-      "date": "27/02/2026",
-      "time": "21:40"
-    },
-    {
-      "role": "Perawat RR",
-      "name": "dr. Primartanto D",
+      "role": "perawat_rr",
+      "name": "Maria Kristina, S.Kep., Ns.",
       "date": "27/02/2026",
       "time": "21:40"
     }

@@ -75,7 +75,7 @@ const getPatientMonitoringResults = (req, res) => {
 
   const filteredPayload = {
     latest_modified_date: payload.latest_modified_date,
-    is_discharged: typeof payload.is_discharged === "boolean" ? payload.is_discharged : false,
+    is_discharge: typeof payload.is_discharge === "boolean" ? payload.is_discharge : false,
     is_verified: typeof payload.is_verified === "boolean" ? payload.is_verified : false,
     hospital_info: {
       address: "JALAN SILOAM NO.6 TANGERANG\r\nTELP : 021 - 5460055\r\nFAX  : 021 - 54210090",
@@ -190,7 +190,7 @@ const upsertItem = (req, res) => {
 };
 
 const upsertResults = (req, res) => {
-  const { operationscheduleid, results, is_discharged, is_verified, signatures } = req.body;
+  const { operationscheduleid, results, is_discharge, is_verified, signatures } = req.body;
 
   console.log(`  -> operationscheduleid: ${operationscheduleid}`);
   console.log(`  -> results count: ${results?.length}`);
@@ -236,8 +236,8 @@ const upsertResults = (req, res) => {
   // Set latest_modified_date ke waktu sekarang di zona Asia/Jakarta
   const latest_modified_date = moment().tz("Asia/Jakarta").format(ISO_WITH_MS_FORMAT);
   data.latest_modified_date = latest_modified_date;
-  if (typeof is_discharged === "boolean") {
-    data.is_discharged = is_discharged;
+  if (typeof is_discharge === "boolean") {
+    data.is_discharge = is_discharge;
   }
   if (typeof is_verified === "boolean") {
     data.is_verified = is_verified;
@@ -254,7 +254,7 @@ const upsertResults = (req, res) => {
       message: "",
       payload: {
         latest_modified_date,
-        is_discharged: typeof data.is_discharged === "boolean" ? data.is_discharged : false,
+        is_discharge: typeof data.is_discharge === "boolean" ? data.is_discharge : false,
         is_verified: typeof data.is_verified === "boolean" ? data.is_verified : false,
         results: data.results
       }
@@ -288,4 +288,59 @@ const verification = (req, res) => {
   });
 };
 
-module.exports = { getPatientMonitoringItems, getPatientMonitoringResults, upsertItem, upsertResults, verification };
+const deleteItem = (req, res) => {
+  const { itemId, operationScheduleId } = req.params;
+
+  console.log(`  -> itemId: ${itemId}`);
+  console.log(`  -> operationScheduleId: ${operationScheduleId}`);
+
+  const numericItemId = Number(itemId);
+
+  if (Number.isNaN(numericItemId)) {
+    return res.status(400).json({
+      isSuccessful: false,
+      message: "Invalid itemId. Must be a number.",
+    });
+  }
+
+  if (numericItemId <= 36) {
+    return res.status(403).json({
+      isSuccessful: false,
+      message: "Items with item_id <= 36 cannot be deleted.",
+    });
+  }
+
+  const rawItems = fs.readFileSync(ITEMS_JSON_PATH, "utf-8").replace(/^\uFEFF/, "");
+  const itemsData = JSON.parse(rawItems);
+
+  const index = itemsData.items.findIndex((i) => i.item_id === numericItemId);
+
+  if (index === -1) {
+    return res.status(404).json({
+      isSuccessful: false,
+      message: `Item with item_id ${numericItemId} not found`,
+    });
+  }
+
+  const deletedItem = itemsData.items.splice(index, 1)[0];
+  fs.writeFileSync(ITEMS_JSON_PATH, JSON.stringify(itemsData, null, 2), "utf-8");
+
+  // Also delete related results from results.json
+  const rawResults = fs.readFileSync(RESULTS_JSON_PATH, "utf-8").replace(/^\uFEFF/, "");
+  const resultsData = JSON.parse(rawResults);
+  const resultsBeforeCount = resultsData.results.length;
+  resultsData.results = resultsData.results.filter((r) => r.item_id !== numericItemId);
+  const deletedResultsCount = resultsBeforeCount - resultsData.results.length;
+
+  if (deletedResultsCount > 0) {
+    fs.writeFileSync(RESULTS_JSON_PATH, JSON.stringify(resultsData, null, 2), "utf-8");
+  }
+
+  return res.json({
+    isSuccessful: true,
+    message: "Item deleted successfully",
+    payload: deletedItem,
+  });
+};
+
+module.exports = { getPatientMonitoringItems, getPatientMonitoringResults, upsertItem, upsertResults, verification, deleteItem };

@@ -395,6 +395,28 @@
       "display_order": 5,
       "is_active": true,
       "is_deletable": false
+    },
+    {
+      "item_id": 37,
+      "item_name": "Anesthesia",
+      "item_unit": "",
+      "item_type": "",
+      "remark": "",
+      "category_id": 12,
+      "display_order": 1,
+      "is_active": true,
+      "is_deletable": false
+    },
+    {
+      "item_id": 38,
+      "item_name": "Operation",
+      "item_unit": "",
+      "item_type": "",
+      "remark": "",
+      "category_id": 12,
+      "display_order": 2,
+      "is_active": true,
+      "is_deletable": false
     }
   ]
 }

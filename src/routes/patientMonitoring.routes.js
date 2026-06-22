@@ -5,6 +5,7 @@ const {
   upsertItem,
   upsertResults,
   verification,
+  deleteItem,
 } = require("../controllers/patientMonitoring.controller");
 
 const router = Router();
@@ -14,5 +15,6 @@ router.get("/results/:operationScheduleId/:observationDate", getPatientMonitorin
 router.post("/items", upsertItem);
 router.post("/results", upsertResults);
 router.post("/verification", verification);
+router.delete("/items/:itemId/:operationScheduleId", deleteItem);
 
 module.exports = router;
